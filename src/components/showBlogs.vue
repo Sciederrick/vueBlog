@@ -10,8 +10,6 @@
 </template>
 
 <script>
-
-
 export default {
   data () {
     return {
@@ -34,9 +32,23 @@ export default {
     filteredBlogs: function(){
       return this.blogs.filter((blog)=>{
         return blog.title.match(this.search);
-      })
-    }
-  }
+      });
+    },
+  },
+  // Registering filters locally
+  // filters:{
+  //   'to-uppercase': function(value){
+  //     return value.toUpperCase();
+  //   }
+  // },
+  //Registering directives locally
+  // directives:{
+  //   'rainbow': {
+  //     bind(el, binding, vnode){
+  //       el.style.color="#" + Math.random().toString(16).slice(2,8);
+  //     }
+  //   }
+  // }
 }
 </script>
 
